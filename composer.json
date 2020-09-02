@@ -1,5 +1,5 @@
 {
-    "name": "dcat-admin-extensions/jsoneditor",
+    "name": "xiudongyang/dcatadmin-jsoneditor",
     "description": "description...",
     "type": "library",
     "keywords": ["dcat-admin",  "jsoneditor", "extension"],
