@@ -7,11 +7,11 @@ use Dcat\Admin\Form\Field;
 class Jsoneditor extends Field
 {
     protected static $js = [
-        '@extension/jsoneditor/jsoneditor.js',
+        '@extension/jsoneditor/jsoneditor.min.js',
     ];
 
     protected static $css = [
-        '@extension/jsoneditor/jsoneditor.css',
+        '@extension/jsoneditor/jsoneditor.min.css',
     ];
 
 
