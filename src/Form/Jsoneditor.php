@@ -56,11 +56,11 @@ class Jsoneditor extends Field
                                        'modes' => ['code', 'form', 'text', 'tree', 'view'], // allowed modes
                                    ]
                                ]);
-        $uniqueId = intval(time());
+
         $this->script = <<<EOT
 // create the editor
 var container = document.getElementById("{$this->id}");
- const options_{$uniqueId} = {
+ const options_{$this->column} = {
     mode: 'code',
     language:'en',
     modes: ['code', 'tree', 'form', 'text',  'view', 'preview'], // allowed modes
@@ -74,7 +74,7 @@ var container = document.getElementById("{$this->id}");
         $('input[id={$this->id}_input]').val(JSON.stringify(window['editor_{$this->id}'].get()));
     }
   }
-window['editor_{$this->id}'] = new JSONEditor(container, options_{$uniqueId}, {$json});
+window['editor_{$this->id}'] = new JSONEditor(container, options_{$this->column}, {$json});
 // set json
 var json = {$json};
 window['editor_{$this->id}'].set(json);
